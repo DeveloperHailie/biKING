@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.sungshin.biking.MapPathActivity">
+
+    <!-- xmlns:app="http: ~ auto 지우면 위치 검색 리스트 오류-->
+
+    <Button
+        android:id="@+id/text_path"
+        style="@style/font_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+
+        android:layout_weight="0.1"
+        android:background="#b1e5fd"
+        android:hint="목적지 검색"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="7dp"
+        android:textAlignment="center"
+        android:textColor="#ffFFFFFF" />
+
+    <TextView
+        android:id="@+id/destination"
+        style="@style/font_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:background="#b1e5fd"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25px"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
+            tools:context="com.sungshin.biking.MapsActivity" />
+    </FrameLayout>
+
+    <Button
+
+        android:id="@+id/search_path"
+        style="@style/font_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="0.07"
+
+        android:background="#b1e5fd"
+        android:text="경로 검색" />
+
+    <Button
+        android:id="@+id/path_on_game"
+        style="@style/font_default"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.07"
+        android:background="#b1e5fd"
+        android:text="게임 화면에 적용하기" />
+
+    <Button
+        android:id="@+id/back_to_game"
+        style="@style/font_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.07"
+        android:background="#b1e5fd"
+        android:text="돌아가기" />
+</LinearLayout>

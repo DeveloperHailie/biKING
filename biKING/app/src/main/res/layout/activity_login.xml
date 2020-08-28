@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.sungshin.biking.LoginActivity"
+    android:background="#b1e5fd"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="339dp"
+        android:layout_height="117dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="-50dp"
+        android:layout_weight="0.68"
+        android:background="#b1e5fd"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/netmarble"
+            android:text="ID"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/et_eamil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ems="8"
+            android:fontFamily="@font/netmarble"
+            android:hint="example@abc.com"
+            android:textColorHighlight="#ffffff"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/netmarble"
+            android:text="PW"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:ems="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/netmarble"
+            android:hint="password"
+            android:inputType="textPassword"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_custom_login"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="카카오 로그인" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_custom_login_out"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="카카오 로그아웃" />-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_signIn"
+            style="@style/button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:onClick="signIn"
+            android:text="로그인"
+            android:textColor="#ffffff" />
+        <!--            -->
+
+
+        <Button
+            android:id="@+id/btn_signUp"
+            style="@style/button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/netmarble"
+            android:onClick="singUp"
+            android:text="회원가입"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:orientation="horizontal">
+
+        <com.kakao.usermgmt.LoginButton
+            android:id="@+id/com_kakao_login"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/fakekakao"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layout_marginTop="5dp"></ImageView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/signInButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"></com.google.android.gms.common.SignInButton>
+
+        <ImageView
+            android:id="@+id/fakegoogle"
+            android:layout_width="250dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layout_marginTop="5dp"></ImageView>
+
+</FrameLayout>
+
+
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="#00000000"-->
+    <!--        android:fontFamily="@font/pfstardust"-->
+    <!--&lt;!&ndash;        android:text="카카오로 로그인" />&ndash;&gt;-->
+
+
+</LinearLayout>

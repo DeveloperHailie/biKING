@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="10">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="6dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="8">
+
+        <TextView
+            android:id="@+id/quest_name"
+            style="@style/font_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가나다"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/quest_exp"
+            style="@style/font_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보상: 000exp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_weight="2"
+        android:id="@+id/quest_confirm"
+        style="@style/button_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:background="@color/point_color"
+        android:text="확인" />
+
+</LinearLayout>

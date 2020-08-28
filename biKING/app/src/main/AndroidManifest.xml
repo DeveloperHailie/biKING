@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sungshin.biking">
+
+    <application
+        android:name="com.sungshin.biking.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/biking_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/biking_logo_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name="com.sungshin.biking.LoadingActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.sungshin.biking.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="Biking">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.sungshin.biking.MapsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_maps" >
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="@string/kakaolink_host"
+                android:scheme="@string/kakao_scheme" />
+        </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.sungshin.biking.Maps2Activity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_maps" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".StartBikingExplanation"></activity>
+
+
+        <activity
+            android:name="com.sungshin.biking.LoginActivity"
+            android:label="Login 액티비티"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="com.sungshin.biking.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:label="Login 액티비티" />
+        <activity android:name="com.sungshin.biking.MapPathActivity"
+            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <activity
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCES_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>

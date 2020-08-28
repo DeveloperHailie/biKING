@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_map"
+    tools:context="com.sungshin.biking.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.sungshin.biking.MapsActivity" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="45dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/riddingtime_title"
+                style="@style/font_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="주행시간" />
+
+            <Chronometer
+
+                android:id="@+id/chrono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pfstardust"
+                android:text="00:00:00"
+                android:textColor="#000000"
+                android:textSize="30sp"
+
+                />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/waiting_text"
+                    style="@style/font_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    android:text="대기중..."
+                    android:textScaleX="0.9"
+                    android:textSize="75sp" />
+
+                <LinearLayout
+                    android:id="@+id/distance_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_ridingDistance"
+                        style="@style/font_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:lineSpacingExtra="-5dp"
+                        android:maxLines="1"
+                        android:text="0.00"
+                        android:textScaleX="0.7"
+                        android:textSize="75sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/font_default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="km"
+
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:id="@+id/riddingDistance_title"
+                            style="@style/font_default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="주행거리"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_ridingDistance_small"
+                style="@style/font_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주행거리 0km" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_ridingTime_small"
+                    style="@style/font_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주행 시간 " />
+
+                <Chronometer
+
+                    android:id="@+id/chrono_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pfstardust"
+                    android:text="00:00:00"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_calories"
+                style="@style/font_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="칼로리 0kcal" />
+
+            <TextView
+                android:id="@+id/text_speed"
+                style="@style/font_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="속도  0km/h" />
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="실패"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:src="@android:drawable/ic_lock_power_off"
+                app:layout_constraintEnd_toEndOf="@id/fab_pause"
+                app:layout_constraintLeft_toLeftOf="@id/fab_pause"
+                app:layout_constraintRight_toRightOf="@id/fab_pause"
+                app:layout_constraintStart_toStartOf="@id/fab_pause"
+                app:layout_constraintTop_toTopOf="@id/fab_pause" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_directions"
+                app:fabSize="normal"
+                app:layout_constraintEnd_toEndOf="@id/fab_pause"
+                app:layout_constraintLeft_toLeftOf="@id/fab_pause"
+                app:layout_constraintRight_toRightOf="@id/fab_pause"
+                app:layout_constraintStart_toStartOf="@id/fab_pause"
+                app:layout_constraintTop_toTopOf="@id/fab_pause"
+                app:maxImageSize="35dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_myLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_mylocation"
+                app:layout_constraintEnd_toEndOf="@id/fab_pause"
+                app:layout_constraintLeft_toLeftOf="@id/fab_pause"
+                app:layout_constraintRight_toRightOf="@id/fab_pause"
+                app:layout_constraintStart_toStartOf="@id/fab_pause"
+                app:layout_constraintTop_toTopOf="@id/fab_pause" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_path_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:src="@drawable/places_ic_search"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/fab_pause"
+                app:layout_constraintLeft_toLeftOf="@id/fab_pause"
+                app:layout_constraintRight_toRightOf="@id/fab_pause"
+                app:layout_constraintStart_toStartOf="@id/fab_pause"
+                app:layout_constraintTop_toTopOf="@id/fab_pause" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_pause"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:src="@android:drawable/ic_media_pause"
+                android:visibility="visible"
+                app:fabCustomSize="80dp"
+                app:fabSize="auto"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_start"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/main_color"
+                android:clickable="true"
+                android:fadingEdgeLength="20dp"
+                android:scaleType="center"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:src="@android:drawable/ic_media_play"
+                android:visibility="visible"
+                app:elevation="6dp"
+                app:fabCustomSize="80dp"
+                app:fabSize="auto"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="20dp"
+        android:layout_height="700dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+
+        android:max="100"
+
+        android:progress="50"
+        android:progressBackgroundTint="#007C2E2E"
+        android:progressBackgroundTintMode="src_over"
+        android:progressDrawable="@drawable/progress"
+        android:progressTintMode="multiply"
+        android:secondaryProgress="80"
+        android:secondaryProgressTint="#3F51B5"
+        android:secondaryProgressTintMode="screen" />
+
+
+</RelativeLayout>

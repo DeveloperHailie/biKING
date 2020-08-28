@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Biking</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="kakao_login"> <u>카카오로 로그인</u>.</string>
+    <string name="playing"> <u>그냥 달리기</u></string>
+
+</resources>

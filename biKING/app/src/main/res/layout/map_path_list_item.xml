@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="8">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="6">
+
+        <TextView
+            android:id="@+id/path_name"
+            style="@style/font_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가나다"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/path_location"
+            style="@style/font_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울 특별시 잠실본동" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_weight="2"
+        android:id="@+id/path_confirm"
+        style="@style/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:text="5km" />
+
+</LinearLayout>

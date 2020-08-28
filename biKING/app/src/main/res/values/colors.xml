@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#1e58a5</color>
+    <color name="sub_color">#f6e718</color>
+    <color name="point_color">#f04e29</color>
+    <color name="dark_color">#3f3f3f</color>
+    <color name="white_color">#ffffff</color>
+</resources>
