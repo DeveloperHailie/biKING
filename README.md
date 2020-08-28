@@ -20,3 +20,7 @@
 https://play.google.com/store/apps/details?id=com.sungshin.biking \
 개발 일지 : \
 https://blog.naver.com/developer1248/222018391870
+
+\
+※보안 상의 문제로 카카오 로그인과 구글맵 기능은 되지 않습니다.\
+구글 플레이 스토어 링크로 확인해주세요!※
